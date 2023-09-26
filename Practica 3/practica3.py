@@ -2,6 +2,8 @@
 
 print("Content-type: text/html\n")
 
+print("Un cambio 2.0")
+
 
 numero = 5
 texto = "5"
