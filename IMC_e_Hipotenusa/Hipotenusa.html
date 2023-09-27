@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="row-cols-1 mt-3 ">
+        <div class="col bg-body-secondary text-dark">
+            <p class="display-1 text-center">Hipotenusa</p>
+            <form action="py/Hipotenusa.py" method="get">
+                <div class="mb-3 mt-3">
+                    <label class="form-label" for="num1">Primer cateto</label>
+                    <input class="form-control" step="any" type="number" id="cat1" name="cateto1"
+                        placeholder="Introduce el primer cateto" required></input>
+                </div>
+                <div class="mb-3 mt-3">
+                    <label class="form-label" for="num2">Segundo cateto</label>
+                    <input class="form-control" step="any" type="number" id="cat2" name="cateto2"
+                        placeholder="Introduce el segundo cateto" required></input>
+                </div>
+                <div class="mb-3 mt-3">
+                    <button type="submit" class="btn btn-light">Enviar</button>
+                </div>
+                <p class="display-1 text-center">La hipotenusa es:</p>
+                <p class="display-1 text-center" id="hipotenusa"></p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
