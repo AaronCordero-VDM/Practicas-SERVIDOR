@@ -33,3 +33,13 @@ print(e)
 print(f)
 
 numero=str(5)
+
+
+#funciones
+variable = "aaaaa"
+
+def miFuncion():
+    variable = "bbbbbbbbb"
+    print(variable)
+miFuncion()   
+print(variable)
