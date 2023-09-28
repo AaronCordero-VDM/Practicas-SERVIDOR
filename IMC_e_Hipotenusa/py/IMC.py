@@ -14,6 +14,7 @@ res = (n1 / (n2*n2))
 
 
 
+
 print("""
 <!DOCTYPE html>
 <html lang="en">
@@ -27,14 +28,17 @@ print("""
 </head>
 
 <body>
-      <h1>Resultado</h1>
-      <h3>
+      
+      <div style="background-color: #9E8661; width: 80%; margin:3em 8em; text-align: center; border-radius: 15px ">
+      <h1 style="color: white; ">Resultado</h1>
+      <p style="color: white; font-size: 52px; padding: 20px ">
 """)
 
-print(res)
+print("Tu IMC es de \n {}".format("%.3f" % res))
 
 print("""
-      </h3>
+      </p>
+      </div>
     </body>
 </html>
 """)

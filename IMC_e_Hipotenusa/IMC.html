@@ -12,24 +12,30 @@
 
 <body>
     <div class="row-cols-1 mt-3 ">
-        <div class="col bg-secondary text-light">
+        <div class="col bg-info-subtle text-black-50">
             <p class="display-1 text-center">IMC</p>
-            <form action="py/IMC.py" method="get">
-                <div class="mb-3 mt-3">
-                    <label class="form-label" for="num1">Peso</label>
+            <form action="py/IMC.py" method="get" class="was-validated">
+                <div class="form-floating mb-3 mt-3">
                     <input class="form-control" step="any" type="number" id="peso" name="peso"
                         placeholder="Introduce tu peso" required></input>
+                    <label for="num1">Peso</label>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+
                 </div>
-                <div class="mb-3 mt-3">
-                    <label class="form-label" for="num2">Altura</label>
+                <div class="form-floating mb-3 mt-3">
                     <input class="form-control" step="any" type="number" id="altura" name="altura"
                         placeholder="Introduce tu altura" required></input>
-                
-                <div class="mb-3 mt-3">
-                    <button type="submit" class="btn btn-light">Enviar</button>
-                </div>
-                <p class="display-1 text-center">Tu IMC es de:</p>
-                <p class="display-1 text-center" id="IMC"></p>
+                    <label for="num2">Altura</label>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+
+
+                    <div class="text-center mb-3 mt-3">
+                        <button type="submit" class="btn btn-info">Enviar</button>
+                    </div>
+                    <p class="display-1 text-center">Tu IMC es de:</p>
+                    <p class="display-1 text-center" id="IMC"></p>
             </form>
         </div>
     </div>
