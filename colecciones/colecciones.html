@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="text-center bg-body-secondary text-dark-emphasis">
+        <p class="display-1">
+            Colecciones
+        </p>
+    </div>
+    <div class="row mt-5">
+        <div class="col"></div>
+        <div class="col bg-body-tertiary text-warning-emphasis">
+            <p class="display-1 text-center">Listas</p>
+            <p>Una lista puede contener varios elementos</p>
+            <p>frutas = <i>["manzana", "platano", "naranja"]</i></p>
+            <ul>
+                <li>Están <b>ordenadas</b> y empiezan en el índice 0</li>
+                <li>Se pueden <b>cambiar, añadir y borrar</b> elementos de la lista</li>
+                <li>Permite elementos <b>duplicados</b></li>
+                <li>Para saber el tamaño de la lista se usa la función <b>len(nombreLista)</b> <i>len(frutas)</i></li>
+                <li>Se pueden <b>mezclar tipos de datos</b> en los elementos de la lista</li>
+                <li>La función <b>type() devuelve: class 'list'</b> <i>type(frutas)</i></li>
+                <li>Para <b>ordenar</b> la lista se usa <b>'.sort()'</b> y ordena primero mayusculas y esta admite
+                    parametros como el 'reverse' <i>frutas.sort(reverse = true)</i><br /><br />
+                    <ul>
+                        <li><i>def myfunc(n):<br />
+                                return abs(n - 50)<br />
+
+                                numeros = [100, 50, 65, 82, 23]<br />
+                                numeros.sort(key = myfunc)
+                            </i>
+                        </li>
+                        <br /><br />
+                        <li>
+                            <i>
+                                frutas.sort(key = str.lower)
+                            </i>
+                        </li>
+                    </ul>
+                </li>
+                <br />
+                <li>Para copiar las listas se puede usar el '.copy()' y asi consigues dos listas diferentes,
+                    si no creas una copia y le das el valor de una a otra varible se cambiaran
+                    ambas.<br /><i>frutasCopia = frutas.copy()</i>
+                </li>
+                <li>Se pueden concatenar listas con un '+' y la guardamos en una nueva lista. <br /><i>listaConcat =
+                        frutas + numeros</i></li>
+            </ul>
+            <p><b>nuevaLista</b> = [ 'x' for 'x' in frutas if 'x' != "manzana"</p>
+
+        </div>
+        <div class="col"></div>
+        <div class="row mt-3 ">
+            <div class="col"></div>
+            <div class="col bg-body-tertiary text-warning-emphasis">
+                <p class="display-1 text-center">Tuplas</p>
+                <p>Una tuple puede contener varios elementos</p>
+                <p>frutas = <i>("manzana", "platano", "naranja")</i></p>
+                <ul>
+                    <li>Están <b>ordenadas</b> y empiezan en el índice 0</li>
+                    <li><b>No</b> se pueden <b>modificar, añadir y borrar elementos</b></li>
+                    <li>Permite elementos <b>duplicados</b></li>
+                    <li>Para saber el tamaño de la tupla se usa la función <b>len(nombreTupla)</b> <i>len(frutas)</i></li>
+                    <li>Se pueden <b>mezclar tipos de datos</b> en los elementos de la lista</li>
+                    <li>La función <b>type() devuelve: class 'tuple'</b> <i>type(frutas)</i></li>
+                    <li>Se puede desempaquetar tuplas, tal que asignas a varias variables los objetos de la tupla
+                        de manera ordenada<br/><i>(verde,amarillo,naranja) = frutas</i><br/><i>verde = manzana<br/>amarillo = platano<br/>naranja = naranja</i>
+                    </li>
+                </ul>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row mt-3 ">
+            <div class="col"></div>
+            <div class="col bg-body-tertiary text-warning-emphasis">
+                <p class="display-1 text-center">Sets</p>
+                <p>Un set puede contener varios elementos</p>
+                <p>frutas = <i>{"manzana", "platano", "naranja"}</i></p>
+                <ul>
+                    <li><b>No estan ordenados</b></li>
+                    <li><b>No</b> se pueden modificar, pero <b>si se pude añadir y borrar</b> elementos</li>
+                    <li><b>No</b> se permiten elementos <b>duplicados</b></li>
+                    <li><b>'True' y '1'</b> es lo mismo</li>
+                    <li>Se pueden <b>mezclar tipos de datos</b> en los elementos del set</li>
+                    <li>La función <b>type() devuelve: class 'set'</b> <i>type(frutas)</i></li>
+                </ul>
+            </div>
+            <div class="col"></div>
+        </div>
+
+        <div class="row mt-3 ">
+            <div class="col"></div>
+            <div class="col bg-body-tertiary text-warning-emphasis">
+                <p class="display-1 text-center">Diccionarios</p>
+                <p>Un diccionario es un <b>almacen de informacion</b> en formato clave valor</p>
+                <p>frutas = <i>{"clave1":"manzana", "clave2":"platano","calve3":"naranja"}</i></p>
+                <ul>
+                    <li>Son <b>ordenados</b></li>
+                    <li>Se pueden <b>cambiar, añadir y borrar</b> valores del diccionario</li>
+                    <li><b>No</b> se permiten <b>claves duplicadas</b></li>
+                    <li>Se pueden <b>mezclar tipos de datos</b> en los valores de un diccionario y las <b>claves son 'str'</b></li>
+                    <li>La función <b>type() devuelve: class 'dict'</b> <i>type(frutas)</i></li>
+                </ul>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+</body>
+
+</html>
