@@ -7,11 +7,12 @@ def pagPrincipal():
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Pagina Principal</title>
+            <link rel="stylesheet" href="css/style.css">
             </head>
         <body>
-            <h1>Bienvenido</h1>
+            <h1>BBVA</h1>
     """)
-    
+
 
 def finHtml():      
     print("""
@@ -22,43 +23,66 @@ def finHtml():
 def listarCuentasInicio():
     print("""
     <h2>Tus cuentas:</h2>
+    <div class='tabla'>
+    
     """)
 
 def listarCuentasFin():
     print("""
-          <hr>  
+          </table>
+          </div>
+          <br>
+    <div class='forms'>
     <form action="nuevaCuenta.py" method="get">
           <button type="submit">Crear cuenta</button>   
     </form>
+    </div>
           <hr>
 """)
     
 def operacionesInicio():
     print("""
-    <form action="operaciones.py" method="get">
-          <label for="cuenta">Cuenta a retirar:</label>
-          <select name="cuenta">
+        <form action="operaciones.py" method="get">
+        <h2>Operacion</h2>
+        <div class='tabla2'>
+          <br>
+          <table>
+            <tr><td for="cuenta">Cuenta:</td>
+            <td><select name="cuenta">
+            <option>Ninguna</option>
     """)
     
 
 
 def operacionesFin():
     print("""
-          </select>
+            </select>
+            </td>
+            </tr>
+            <tr><td for="cantidad">Cantidad:</td>
+            <td><input type="number" name="cantidad" id="cantidad" step="5" value="0"/></td>
+            </tr>
+            <tr><td for="concepto">Concepto:</td>
+            <td><input required type="text" name="concepto" id="concepto" value="Varios" placeholder="Introduce el concepto"/></td>
+            </tr>
+            </table>
+        </div>
+          <hr>
+        <div class="metodo">
           <br>
-          <br>
-          <label for="cantidad">Cantidad a retirar:</label>
-          <input type="number" name="cantidad" id="cantidad" step="5"/>
-          <span>Euros</span>
-          <br>
-            <input type="radio" id="ingresar" variable=v name="operacion" value="ingresar" />
-            <label for="ingresar">Ingresar</label>
-            <input type="radio" id="retirar" variable=v name="operacion" value="retirar" />
-            <label for="retirar">Retirar</label>
+            <input type="radio" id="ingresar" variable=v name="operacion" value="ingresar" checked/>
+            <label for="ingresar" class='ingresar'>Ingresar</label>
             <br>
+            <input type="radio" id="retirar" variable=v name="operacion" value="retirar" />
+            <label for="retirar" class='retirar'>Retirar</label>
+            <br>
+          </div>
+          <div class="boton">
           <button>Confirmar</button>
+          </div>
+        
+    
     </form>
-    <hr>
           """)
 
     
@@ -71,11 +95,33 @@ def recarga():
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta http-equiv="refresh" content="2;pagPrincipal.py">
+            <link rel="stylesheet" href="css/style.css">
             </head>
 
         <body>
-            <h1>Realizando operacion</h1>
-            <h3>Espere un segundo</h3>
+          <div class="loading">
+            <h1 class="textoLoad">Realizando operacion</h1>
+            <h3 class="textoLoad">Espere un segundo</h3>
+          </div>
+          <div class="loader">
+          <div class="lds-facebook"><div></div><div></div><div></div></div>
+          </div>
+        </body>
+        </html>
+    """)
+
+def recargaSinCambios():
+    print("""
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="refresh" content="2;pagPrincipal.py">
+            </head>
+
+        <body>
         </body>
         </html>
     """)
