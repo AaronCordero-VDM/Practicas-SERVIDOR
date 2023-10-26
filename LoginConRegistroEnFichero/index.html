@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login con Registro</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+        <div class="container-fluid justify-content-end">
+          <!-- Links -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="modal" data-bs-target="#registroModal">Registro</a>
+            </li>
+          </ul>
+        </div>
+      
+    </nav>
+
+    <!-- The Modal -->
+<div class="modal" id="loginModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Formulario de Login</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button> <!--La X de la derecha arriba-->
+        </div>
+  
+        <!-- Modal body -->
+        <form action="login.py" method="get">
+          <div class="modal-body">
+              <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre" required> <br />
+              <input class="form-control" type="password" name="password" id="password" placeholder="Contraseña" required><br />
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success">Iniciar</button>
+          </div>
+        </form>
+  
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="registroModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Formulario de Registro</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button> <!--La X de la derecha arriba-->
+        </div>
+  
+        <!-- Modal body -->
+        <form action="registro.py" method="get">
+          <div class="modal-body">
+              <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre" required> <br />
+              <input class="form-control" type="password" name="password" id="password" placeholder="Contraseña" required><br />
+              <input class="form-control" type="email" name="email" id="email" placeholder="Email" required><br />
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success">Registrar</button>
+          </div>
+        </form>
+  
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

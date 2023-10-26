@@ -1,0 +1,170 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    font-size: 60px;
+    font-family: monospace;
+    font-style: italic;
+    color: rgb(13, 13, 161);
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    font-size: 40px;
+    font-family: monospace;
+    color: rgb(6, 6, 95);
+    text-align: center;
+}
+
+.tabla, .tabla2, .tabla3{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+th{
+    background-color: #8eb6f3;
+    border: solid 3px rgb(247, 181, 39);
+}
+
+.tabla3 >table> tbody > tr > th{
+    min-width: 150px;
+    width: auto;
+}
+
+.metodo, .forms, .operacion{
+    display: flex;
+    justify-content: center;
+}
+
+.textoLoad{
+    vertical-align: middle;
+    text-align: center;
+}
+
+.operacion{
+    font-size: 30px;
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.volver{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 15px;
+}
+
+
+table{
+    background-color: rgb(231, 230, 230);
+    border: #f1ab42 2px solid;
+    border-collapse: collapse;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+
+td{
+    min-width: 70px;
+    padding: 15px;
+}
+
+label{
+    font-size: 25px;
+}
+
+#ingresar, #retirar{
+    margin:20px 15px;
+}
+
+#cantidad, #concepto{
+    font-size: 25px;
+}
+
+select{
+    padding: 10px;
+    font-size: 20px;
+}
+
+button{
+    background-color: bisque;
+    width: 200px;
+    min-height: 60px;
+    height: auto;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.info{
+    background-color: coral;
+}
+
+button:hover{
+    font-size: 30px;
+    background-color: #f1ab42;
+}
+
+.info:hover{
+    font-size: 30px;
+    background-color: #fff;
+}
+
+.ingresar:hover{
+    font-size: 30px;
+    color: green;
+}
+
+.retirar:hover{
+    font-size: 30px;
+    color: red;
+}
+
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+.loader{
+    display: flex;
+    justify-content: center;
+}
+
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 45%;
+    width: 16px;
+    background: coral;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  .lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+  }
+  .lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+  }
+  .lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+  }
+  @keyframes lds-facebook {
+    0% {
+      top: 8px;
+      height: 64px;
+    }
+    50%, 100% {
+      top: 24px;
+      height: 32px;
+    }
+  }
+  
