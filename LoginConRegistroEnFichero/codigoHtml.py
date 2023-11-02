@@ -9,7 +9,7 @@ def error(texto):
             <title>Login con registro</title>
             </head>
         <body>
-            <h1>Error</h1>  
+            <h1>Error</h1>
     """)
     print(texto)
     print("""
@@ -33,8 +33,9 @@ def correcto():
         </html>
     """)
 
-def application(texto):
-    print("""
+def application(texto, enlace):
+    print("""Content-Type: text/html\n
+          
         <!DOCTYPE html>
         <html lang="en">
         <head>
@@ -44,10 +45,11 @@ def application(texto):
             <title>Login con registro</title>
             </head>
         <body>
-            <h1>Aceros de Hispania</h1>  
-    """)
-    print(texto)
-    print("""
+            <h1>Aceros de Hispania</h1>
+            <h3>"""+texto+"""</h3>
+          <a href="""+enlace+""">enlace a la otra pagina</a>
+          <br>
+        <a href="logout.py">Salir de la aplicacion</a>
         </body>
         </html>
     """)
