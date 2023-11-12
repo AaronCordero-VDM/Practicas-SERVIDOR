@@ -1,0 +1,40 @@
+#!C:\Users\zx22student3208\AppData\Local\Programs\Python\Python311\python.exe
+
+print("Content-type: text/html\n")
+
+import os
+from urllib.parse import urlparse, unquote, parse_qs
+
+#Imprimimos el comienzo del html
+print("""
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tratar formulario</title>
+</head>
+<body>
+      <h1>Tratar formulario</h1>
+""")
+     
+ru = os.environ.get("REQUEST_URI") #guarda el request en la variable ru
+parametros = urlparse(ru) #Guarda los parametros de la url en una lista 
+param = parse_qs(parametros[4]) #Cojemos la parte de la url que nos interesa en este caso los parametros introducidos por el usuario
+
+#Asiganmos esos parametros a distintas funciones
+nombre = param['nombre'][0]
+edad = param['edad'][0]
+peso = param['peso'][0]
+altura = param['altura'][0]
+
+#Crear una funcion para calculoIMC
+def calculoIMC():
+    imc = (peso*peso/altura)
+    print(imc)
+
+print(nombre, edad)
+
+#Imprimimos el final del html
+print("""
+</body>
+</html>
+""")
