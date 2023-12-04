@@ -1,0 +1,118 @@
+Ejercicio 1.-
+
+redes_sociales=[("Twitter", "https://twitter.com/ejemplo_usuario"),
+("Facebook","https://facebook.com/ejemplo_usuario"),
+("Instagram","https://instagram.com/ejemplo_usuario"),
+("LinkedIn","https://linkedin.com/in/ejemplo_usuario"),
+("YouTube","https://youtube.com/c/ejemplo_usuario")]
+
+==================================================================
+Ejercicio 3.-
+
+inventarioProductos = {
+    "PRD001": ("Laptop", 1200.00),
+    "PRD002": ("Smartphone", 800.00),
+    "PRD003": ("Tablet", 400.00),
+    "PRD004": ("Monitor", 300.00),
+    "PRD005": ("Teclado", 50.00)
+}
+
+==================================================================
+Ejercicio 4.-
+
+   <!DOCTYPE html>
+   <html>
+   <head>
+       <title>Ingreso de Palabra</title>
+   </head>
+   <body>
+       <form action="ejRA_palabras.py" method="get">
+           <label for="palabra">Palabra:</label>
+           <input type="text" name="palabra"/>
+           <input type="submit" value="Enviar" />
+       </form>
+   </body>
+   </html>
+
+
+==================================================================
+Ejercicio 5.-
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Suma por Tipo</title>
+    </head>
+    <body>
+        <hr />
+        <form action="ejerRecup5.py" method="get">
+            Tipo de número: 
+            <select name="tipo">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select><br />
+            <input type="submit" value="Sumar" />
+        </form>
+        <hr />
+    </body>
+</html>
+
+==================================================================
+Ejercicio 6.-
+
+   CREATE TABLE categorias (
+       id INT(6) AUTO_INCREMENT NOT NULL,
+       nombre VARCHAR(50) NOT NULL UNIQUE,
+       CONSTRAINT pk_categoria PRIMARY KEY(id)
+   )ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+   CREATE TABLE articulos (
+       id INT(6) AUTO_INCREMENT NOT NULL,
+       titulo VARCHAR(100) NOT NULL,
+       contenido TEXT NOT NULL,
+       id_categoria INT(6) NOT NULL,
+       CONSTRAINT pk_articulo PRIMARY KEY(id),
+       CONSTRAINT fk_articulo_categoria FOREIGN KEY(id_categoria) REFERENCES categorias(id)
+   )ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+INSERT INTO categorias(nombre) VALUES ('Política');
+INSERT INTO categorias(nombre) VALUES ('Economía');
+INSERT INTO categorias(nombre) VALUES ('Deportes');
+INSERT INTO categorias(nombre) VALUES ('Sociedad');
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Artículos de Periódico</title>
+</head>
+<body>
+    <hr />
+    <h2>Publicar Nuevo Artículo:</h2>
+    <form action="ejRA_publicarArticulo.py" method="get">
+        Título del Artículo: <input type="text" name="titulo" required/><br />
+        Contenido: <textarea name="contenido" required></textarea><br />
+        Categoría: <select name="categoria">
+			<option value="politica">Política</option>
+			<option value="economia">Economía</option>
+			<option value="deportes">Deportes</option>
+			<option value="sociedad">Sociedad</option>
+        </select><br />
+        <input type="submit" value="Publicar Artículo" />
+    </form>
+    <hr />
+    <h2>Buscar Artículos por Categoría:</h2>
+    <form action="ejRA_buscarArticulos.py" method="get">
+        Categoría: <select name="categoria">
+			<option value="politica">Política</option>
+			<option value="economia">Economía</option>
+			<option value="deportes">Deportes</option>
+			<option value="sociedad">Sociedad</option> 
+        </select><br />
+        <input type="submit" value="Buscar Artículos" />
+    </form>
+    <hr />
+</body>
+</html>

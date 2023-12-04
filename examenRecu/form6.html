@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Artículos de Periódico</title>
+</head>
+<body>
+    <hr />
+    <h2>Publicar Nuevo Artículo:</h2>
+    <form action="ejRA_publicarArticulo.py" method="get">
+        Título del Artículo: <input type="text" name="titulo" required/><br />
+        Contenido: <textarea name="contenido" required></textarea><br />
+        Categoría: <select name="categoria">
+			<option value="politica">Política</option>
+			<option value="economia">Economía</option>
+			<option value="deportes">Deportes</option>
+			<option value="sociedad">Sociedad</option>
+        </select><br />
+        <input type="submit" value="Publicar Artículo" />
+    </form>
+    <hr />
+    <h2>Buscar Artículos por Categoría:</h2>
+    <form action="ejRA_buscarArticulos.py" method="get">
+        Categoría: <select name="categoria">
+			<option value="politica">Política</option>
+			<option value="economia">Economía</option>
+			<option value="deportes">Deportes</option>
+			<option value="sociedad">Sociedad</option> 
+        </select><br />
+        <input type="submit" value="Buscar Artículos" />
+    </form>
+    <hr />
+</body>
+</html>

@@ -4,6 +4,16 @@
 
 print("Content-type: text/html\n")
 
+print("""
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tabla produco</title>
+</head>
+<body>
+      <h1>Redes Sociales</h1>
+""")
+
 preciosProductosID = {
     "CA132":99.2,
     "CB231":55.7,
@@ -20,3 +30,8 @@ for id, precio in preciosProductosID.items(): # Por cada elemento del array, cre
 table += f"<tr><td>Total:</td><td>{total}</td></tr></tbody></table>" # Concatena el total en un tr
 
 print(table)
+
+print("""
+</body>
+</html>
+""")
